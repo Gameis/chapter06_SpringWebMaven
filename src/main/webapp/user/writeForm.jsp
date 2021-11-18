@@ -14,7 +14,8 @@
 </style>
 </head>
 <body>
-	<img alt="망상토끼.png" src="../image/망상토끼.png" width="70" height="70">
+	<img alt="망상토끼.png" src="../image/망상토끼.png" width="70" height="70"
+	style="cursor: pointer;" onclick="location.href='../index.jsp'">
 	<form id="writeForm" method="post">
 		<table border="1" cellpadding="5" cellspacing="0">
 			<tr>
@@ -29,7 +30,7 @@
 				<td>아이디</td>
 				<td>
 					<input type="text" name="id" id="id">
-					<div id="idDIv"></div>
+					<div id="idDiv"></div>
 				</td>
 			</tr>
 			

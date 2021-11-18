@@ -1,4 +1,5 @@
 $('#writeBtn').click(function() {
+	$('#nameDiv').empty();
 	$('#idDiv').empty();
 	$('#pwdDiv').empty();
 	
@@ -9,7 +10,17 @@ $('#writeBtn').click(function() {
 	else if($('#pwd').val() == '')
 		$('#pwdDiv').html('비밀번호 입력');
 	else
-		$('#writeForm').submit();
+		$.ajax({
+			url: '/chapter06_SpringWebMaven/user/write',
+			type: 'post',
+			data: $('#writeForm').serialize(),
+			success: function(){
+				alert('회원 가입 등록');
+			},
+			error: function(err) {
+				console.log(err);
+			}
+		});
 });
 		
 $('#id').focusout(function() {
